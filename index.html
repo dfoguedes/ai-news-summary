@@ -94,6 +94,27 @@
         .news-content {
             font-size: 0.95rem;
             color: #343a40;
+            line-height: 1.7;
+        }
+
+        .news-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .news-content li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-content li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-it);
+            font-weight: 700;
         }
 
         strong {
@@ -119,56 +140,57 @@
 
     <main>
         <section>
-  <h2>☁️ IT News</h2>
-  <ul>
-    <li>
-      <strong>Cibersegurança e Ataques à Cadeia de Abastecimento:</strong> Autoridades prenderam dois alegados membros do grupo de hackers <strong>TeamPCP</strong>, responsável pelo comprometimento de mais de <strong>1.000 organizações</strong> em campanhas de ataque supply-chain.<br>
-      Em simultâneo, mais de <strong>100 empresas tecnológicas</strong> (incluindo a <strong>OpenAI</strong> e a <strong>Anthropic</strong>) assinaram uma carta aberta a exigir o reforço urgente das defesas contra ciberataques potenciados por IA.
-    </li>
-    <li>
-      <strong>Notícias OpenAI e Hardware Dedicado:</strong> A <strong>OpenAI</strong> apresentou o <strong>Jalapeño</strong>, um novo chip proprietário focado na otimização da inferência de IA com menor latência, e anunciou o encerramento do contrato com a ferramenta <strong>Cursor</strong> após esta ter sido adquirida pela <strong>SpaceX</strong>.
-    </li>
-    <li>
-      <strong>Sistemas Operativos e Dev Ecosystem:</strong> A comunidade do <strong>Debian</strong> aprovou formalmente a utilização responsável de IA gerativa no desenvolvimento do projeto.<br>
-      Entretanto, a mais recente atualização opcional do <strong>Windows 11</strong> (compilação <strong>KB5120998</strong>) está a provocar falhas graves no ambiente de trabalho dos utilizadores.
-    </li>
-    <li>
-      <strong>Redes de Nova Geração em Portugal:</strong> Dados da <strong>ANACOM</strong> revelam que <strong>95,8%</strong> dos acessos de telefone fixo no país já utilizam redes de nova geração, assinalando o fim progressivo do tráfego analógico tradicional.
-    </li>
-    <li>
-      <strong>Regulação e Decisão Judicial nos EUA:</strong> Um juiz federal considerou ilegal a tentativa de bloqueio do governo dos <strong>EUA</strong> à <strong>Anthropic</strong>, tomada após a empresa recusar adaptar os seus modelos para vigilância em massa e sistemas militares autónomos.
-    </li>
-  </ul>
+    <h2 class="category-title it">☁️ IT News</h2>
+    <div class="news-list">
+        <article class="news-card">
+            <p class="news-content">Em <strong>Portugal</strong>, <strong>95,8%</strong> dos acessos de telefone fixo já utilizam redes de nova geração, segundo os dados mais recentes da <strong>ANACOM</strong>, confirmando a transição contínua do mercado nacional para infraestruturas de fibra.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">A <strong>OpenAI</strong> revelou os primeiros testes do <strong>Jalapeño</strong>, o seu chip proprietário para inferência de <strong>IA</strong> de baixa latência. Em paralelo, a empresa encerrou a parceria com o editor de código <strong>Cursor</strong> após a sua aquisição pela <strong>SpaceX</strong>, e publicou um relatório de segurança detalhado sobre o incidente recente na plataforma <strong>Hugging Face</strong>.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">Mais de <strong>100 empresas tecnológicas</strong>, incluindo a <strong>OpenAI</strong> e a <strong>Anthropic</strong>, assinaram um manifesto conjunto apelando ao reforço urgente das defesas de cibersegurança contra ameaças impulsionadas por <strong>IA</strong>. O alerta coincide com a detenção de dois membros do grupo <strong>TeamPCP</strong>, responsável por ataques à cadeia de abastecimento de mais de <strong>1.000 organizações</strong>.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">O projeto <strong>Debian</strong> aprovou formalmente uma resolução para permitir a utilização responsável de ferramentas de <strong>IA generativa</strong> no desenvolvimento da distribuição. Por outro lado, a <strong>Microsoft</strong> enfrenta críticas após a atualização <strong>KB5120998</strong> (compilação <strong>26200.9278</strong>) do <strong>Windows 11</strong> gerar falhas graves no ambiente de trabalho dos utilizadores.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">Na liderança das grandes tecnológicas, <strong>John Ternus</strong> prepara-se para suceder a <strong>Tim Cook</strong> na <strong>Apple</strong> com o foco em acelerar a estratégia de <strong>IA</strong> da empresa, enquanto o debate sobre a automação no desenvolvimento de software ganha tração com analistas a defenderem que os programadores passarão a focar-se no pensamento crítico e na arquitetura de sistemas.</p>
+        </article>
+    </div>
 </section>
 
 <section>
-  <h2>⚖️ Política & Economia</h2>
-  <ul>
-    <li>
-      <strong>Combustíveis em Portugal:</strong> O <strong>Governo português</strong> voltou a recalibrar o Imposto sobre os Produtos Petrolíferos (<strong>ISP</strong>) para conter as oscilações dos preços ao consumidor, numa altura em que a <strong>Região Autónoma dos Açores</strong> regista novos aumentos nas tabelas para setembro.
-    </li>
-    <li>
-      <strong>Design da Moeda Única:</strong> Mais de <strong>50%</strong> dos cidadãos auscultados demonstraram-se favoráveis à remodelação do visual das notas de euro, num processo conduzido pelo <strong>Banco Central Europeu (BCE)</strong>.
-    </li>
-    <li>
-      <strong>Mercado Global de Semicondutores:</strong> A ameaça da imposição de novas tarifas sobre a importação de semicondutores nos <strong>EUA</strong> está a gerar apreensão entre as <strong>Big Techs</strong>, que alertam para potenciais bloqueios ao avanço da infraestrutura de IA.
-    </li>
-  </ul>
+    <h2 class="category-title pol">⚖️ Política & Economia</h2>
+    <div class="news-list">
+        <article class="news-card">
+            <p class="news-content">O <strong>Governo Português</strong> voltou a ajustar o Imposto sobre os Produtos Petrolíferos (<strong>ISP</strong>) no continente para mitigar a oscilação dos preços dos combustíveis, ao mesmo tempo que na Região Autónoma dos <strong>Açores</strong> se regista uma subida de preços em setembro após três meses consecutivos de descidas.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">Mais de <strong>50%</strong> dos cidadãos auscultados concordam com o plano de renovação estética das notas de <strong>Euro</strong>, um projeto promovido pelo <strong>Banco Central Europeu (BCE)</strong> para atualizar os elementos visuais da moeda única nas próximas décadas.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">O sindicato <strong>STOP</strong> anunciou estar a avaliar novas formas de protesto em <strong>Portugal</strong> contra a devolução de salários exigida a técnicos superiores nas escolas, classificando a decisão como prejudicial para psicólogos, terapeutas e assistentes sociais do setor público.</p>
+        </article>
+    </div>
 </section>
 
 <section>
-  <h2>🌍 Geral & Sociedade</h2>
-  <ul>
-    <li>
-      <strong>Desporto Nacional:</strong> O canoísta português <strong>Fernando Pimenta</strong> sagrou-se campeão mundial de <strong>K1 1.000m</strong> em Poznan, alcançando a sua quarta medalha de ouro nesta prova e somando dez pódios em campeonatos do mundo na mesma distância.
-    </li>
-    <li>
-      <strong>Avanços na Medicina:</strong> Uma equipa médica em Londres recorreu pela primeira vez ao suporte de <strong>Inteligência Artificial</strong> numa cirurgia cerebral complexa para remoção de um tumor, conseguindo salvar a visão de um doente de <strong>48 anos</strong>.
-    </li>
-    <li>
-      <strong>Educação e Ação Sindical:</strong> O sindicato <strong>STOP</strong> encontra-se a avaliar a realização de novos protestos contra a devolução de salários exigida a técnicos superiores que prestam apoio nas escolas portuguesas.
-    </li>
-  </ul>
+    <h2 class="category-title soc">🌍 Geral & Sociedade</h2>
+    <div class="news-list">
+        <article class="news-card">
+            <p class="news-content">O canoísta português <strong>Fernando Pimenta</strong> sagrou-se campeão do mundo em <strong>K1 1000m</strong> em <strong>Poznan</strong>, na <strong>Polónia</strong>, com o tempo de <strong>03:24.39</strong>, conquistando o seu quarto título mundial nesta distância e a décima medalha no seu historial na prova.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">Uma equipa médica em <strong>Londres</strong> realizou com sucesso uma cirurgia ao cérebro assistida por <strong>IA</strong> para remover um tumor, permitindo salvar a visão de um doente de <strong>48 anos</strong> no que é considerado um marco na medicina operatória.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">A <strong>Xiaomi</strong> oficializou a sua expansão para o mercado europeu com o lançamento da plataforma <strong>Xiaomi Auto</strong> para a sua divisão de veículos elétricos, competindo com inovações como a da fabricante chinesa <strong>Hongqi</strong>, que apresentou um teto solar capaz de gerar <strong>400 kWh</strong> anuais.</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">Desenvolvida no <strong>Porto</strong>, a aplicação <strong>Correr Por Prazer</strong> expandiu o seu catálogo digital para mapear mais de <strong>600 provas de trail</strong> a nível global, facilitando a consulta de calendários desportivos em dispositivos <strong>Android</strong>.</p>
+        </article>
+    </div>
 </section>
     </main>
 
