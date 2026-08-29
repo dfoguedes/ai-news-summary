@@ -26,20 +26,51 @@ system_prompt = """
 A tua tarefa é ler a lista de artigos fornecida em bruto e gerar uma síntese altamente estruturada em Português de Portugal (PT-PT), preferencialmente sobre notícias de origem portuguesa ou com relevância direta para Portugal.
 
 Regras de Formatação:
-1. Agrupa as notícias prioritariamente e estritamente nas seguintes categorias (usando os respetivos ícones):
+1. Agrupa as notícias nas seguintes categorias:
    - ☁️ IT News
-   - ⚖️ Política & Economia (Apenas se tiver impacto relevante ou geral)
-   - 🌍 Geral & Sociedade (Outros temas relevantes que não se enquadrem nas categorias de IT acima)
-   -
+   - ⚖️ Política & Economia
+   - 🌍 Geral & Sociedade
 2. Para cada notícia selecionada:
    - Escreve um resumo conciso de 1 a 3 frases.
    - Destaca em **negrito** as entidades principais, tecnologias, ferramentas, números ou nomes próprios.
    - Funde notícias repetidas ou sobre o mesmo tema num único ponto coeso.
-
 3. Restrições:
    - Mantém um tom neutro, direto e técnico quando aplicável.
    - Não adiciones introduções ("Aqui está o resumo..."), conclusões ou comentários meta.
-   - Se uma categoria não tiver notícias relevantes nos feeds recolhidos, omite essa categoria.
+   - Se uma categoria não tiver notícias relevantes, omite essa categoria.
+
+FORMATO HTML OBRIGATÓRIO — usar EXATAMENTE estas tags e classes:
+
+<section>
+    <h2 class="category-title it">☁️ IT News</h2>
+    <div class="news-list">
+        <article class="news-card">
+            <p class="news-content">A <strong>Google</strong> lançou o novo modelo...</p>
+        </article>
+        <article class="news-card">
+            <p class="news-content">A <strong>Microsoft</strong> anunciou...</p>
+        </article>
+    </div>
+</section>
+
+<section>
+    <h2 class="category-title soc">🌍 Geral & Sociedade</h2>
+    <div class="news-list">
+        <article class="news-card">
+            <p class="news-content">O <strong>Governo</strong> aprovou...</p>
+        </article>
+    </div>
+</section>
+
+REGRAS HTML ESTRITAS:
+- Cada categoria deve estar numa <section> separada.
+- O título da categoria deve ser <h2> com class="category-title it" (ou pol, ou soc).
+- Cada notícia deve estar dentro de <article class="news-card">.
+- O texto de cada notícia deve estar dentro de <p class="news-content">.
+- Usa <strong> para negrito.
+- NÃO uses listas Markdown (-, *, #), nem headings Markdown.
+- NÃO uses <main>, <html>, <head>, <body>.
+- O output final deve ser apenas e só HTML com as classes indicadas, sem explicações adicionais.
 """
 
 news = []
@@ -61,10 +92,9 @@ response = client.models.generate_content(
         "Aqui está a lista de notícias em bruto para sintetizares:\n\n"
         f"{articles}"
         "\n\nIMPORTANTE: Prioriza notícias de origem portuguesa ou com impacto direto em Portugal. "
-        "O output deve ser em português de Portugal (PT-PT) e bem estruturado. "
-        "Gerar apenas o conteúdo HTML que será inserido dentro da tag <main> de uma página já existente. "
-        "Não incluir <html>, <head>, <body>, <main>, <style> ou <script> — apenas as tags <section> com as categorias e os cards de notícias."
-        "Cada artigo tem de incluir bullet points para ficar mais visivel para o utilizador como o proprio texto  ser o minimo possivel para o utilizador compreender a noticia, e bem formatado com um break por cada"
+        "O output deve ser em português de Portugal (PT-PT). "
+        "Segue EXATAMENTE o formato HTML com as classes CSS definido nas instruções do sistema. "
+        "Não incluas <html>, <head>, <body>, <main>, <style> ou <script>."
     ),
     config=types.GenerateContentConfig(
         system_instruction=system_prompt,
