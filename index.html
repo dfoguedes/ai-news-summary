@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Síntese Diária de Notícias - Tech & Platform Engineering</title>
+    <style>
+        :root {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --border-card: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-it: #38bdf8;
+            --accent-pol: #f59e0b;
+            --accent-soc: #34d399;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-card);
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--text-main);
+        }
+
+        .meta-info {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-title.it { color: var(--accent-it); }
+        .category-title.pol { color: var(--accent-pol); }
+        .category-title.soc { color: var(--accent-soc); }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .news-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 8px;
+            padding: 1.25rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .news-card:hover {
+            border-color: #475569;
+        }
+
+        .news-content {
+            font-size: 0.975rem;
+            color: #e2e8f0;
+        }
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Resumo Executivo de Notícias</h1>
+        <div class="meta-info">Foco em Platform Engineering, DevOps, Infraestrutura e Atualidades</div>
+    </header>
+
+    <main>
+        <section>
+  <h2>☁️ Platform Engineering and IT (AI, DevOps etc)</h2>
+  <ul>
+    <li>
+      <strong>Cibersegurança e Defesas de IA:</strong> Mais de <strong>100 empresas tecnológicas</strong>, incluindo a <strong>OpenAI</strong> e a <strong>Anthropic</strong>, assinaram uma carta aberta alertando para a sofisticação dos ataques com <strong>IA</strong> e exigindo um reforço urgente de defesas. Paralelamente, a <strong>OpenAI</strong> divulgou os resultados da investigação ao incidente de segurança no <strong>Hugging Face</strong>, enquanto autoridades detiveram 2 membros do grupo de hackers <strong>TeamPCP</strong>.
+    </li>
+    <li>
+      <strong>OpenAI & Hardware de Inferência:</strong> A <strong>OpenAI</strong> apresentou o <strong>Jalapeño</strong>, o seu novo chip customizado focado em inferência de baixa latência e elevada eficiência energética. Em simultâneo, a empresa encerrou o fornecimento de modelos via API ao editor de código <strong>Cursor</strong> na sequência da sua aquisição pela <strong>SpaceX</strong>.
+    </li>
+    <li>
+      <strong>Engenharia de Software & Comunidade Open-Source:</strong> O projeto <strong>Debian</strong> aprovou formalmente o uso responsável de ferramentas de <strong>IA generativa</strong> no desenvolvimento da distribuição. O impacto da utilização crescente de agentes de código no papel do <strong>desenvolvedor de software</strong> continua a ser debatido por peritos da indústria.
+    </li>
+    <li>
+      <strong>Infraestruturas de Telecomunicações em Portugal:</strong> Segundo os dados mais recentes da <strong>ANACOM</strong>, <strong>95,8%</strong> dos acessos de telefone fixo em <strong>Portugal</strong> já assentam em redes de nova geração (fibra ótica e VoIP), consolidando a descontinuação da rede analógica tradicional.
+    </li>
+    <li>
+      <strong>Sistemas Operativos e Liderança Tecnológica:</strong> A atualização opcional <strong>KB5120998</strong> para o <strong>Windows 11</strong> está a causar falhas no ambiente de trabalho dos utilizadores. No ecossistema <strong>Apple</strong>, <strong>John Ternus</strong> prepara-se para suceder a <strong>Tim Cook</strong> como CEO, herdando o desafio do roteiro de <strong>IA</strong> da empresa, numa altura em que as assinaturas do <strong>Apple TV</strong> e <strong>Apple One</strong> sobem até <strong>20%</strong>.
+    </li>
+    <li>
+      <strong>Regulação e Semicondutores:</strong> Novas propostas de tarifas sobre <strong>semicondutores</strong> ponderadas por <strong>Donald Trump</strong> geram preocupação entre as <strong>Big Techs</strong>, ameaçando inflacionar os custos de infraestrutura para centros de dados e desenvolvimento de <strong>IA</strong>.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>⚖️ Política & Economia</h2>
+  <ul>
+    <li>
+      <strong>Orçamento do Estado em Portugal:</strong> O Governo liderado por <strong>Luís Montenegro</strong> e o <strong>PS</strong> continuam as negociações para a viabilização do <strong>Orçamento do Estado</strong>, mantendo apenas dois pontos em aberto para a ronda negocial de setembro.
+    </li>
+    <li>
+      <strong>Fiscalidade sobre Combustíveis:</strong> O <strong>Executivo português</strong> voltou a recalibrar o <strong>Imposto sobre os Produtos Petrolíferos (ISP)</strong>, mitigando a descida do preço final na bomba para acomodar flutuações de mercado.
+    </li>
+    <li>
+      <strong>Zona Euro e Sistema Financeiro:</strong> Mais de <strong>50% dos inquiridos</strong> num estudo europeu apoiam a renovação do design das notas de <strong>Euro</strong>, projeto atualmente sob consulta e desenvolvimento pelo <strong>Banco Central Europeu (BCE)</strong>.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>🌍 Geral & Sociedade</h2>
+  <ul>
+    <li>
+      <strong>Desporto Nacional:</strong> O canoísta português <strong>Fernando Pimenta</strong> sagrou-se campeão do mundo na prova de <strong>K1 1.000m</strong> em Poznan, na Polónia, arrecadando o seu 4.º título mundial nesta disciplina.
+    </li>
+    <li>
+      <strong>Avanços de IA na Medicina:</strong> Uma equipa de neurocirurgiões em <strong>Londres</strong> concluiu com sucesso uma cirurgia ao cérebro apoiada por sistemas de <strong>IA</strong>, conseguindo remover um tumor e salvar a visão de um paciente de <strong>48 anos</strong>.
+    </li>
+    <li>
+      <strong>Desenvolvimento de Software Nacional:</strong> A aplicação portuense <strong>Correr Por Prazer</strong> expandiu a sua oferta mobile, passando a mapear mais de <strong>600 provas de trail</strong> a nível global.
+    </li>
+  </ul>
+</section>
+    </main>
+
+</body>
+</html>
