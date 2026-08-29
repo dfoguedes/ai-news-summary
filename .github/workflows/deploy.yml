@@ -3,7 +3,7 @@ name: Generate Daily News Summary
 on:
   schedule:
     # Runs every day at 08:00 UTC (9h Portugal no Inverno, 10h no Verão)
-    - cron: '0 8 * * *'
+    # - cron: '0 8 * * *'
   workflow_dispatch:  # Permite correr manualmente no botão "Run workflow"
 
 permissions:
